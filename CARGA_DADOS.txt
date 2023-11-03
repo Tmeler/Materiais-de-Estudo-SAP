@@ -1,0 +1,25 @@
+import random
+import faker
+
+# Crie uma instância do Faker para gerar dados fictícios
+fake = faker.Faker()
+
+# Abra o arquivo para escrever os dados
+with open('tabela_aleatoria.txt', 'w') as arquivo:
+    # Escreva os cabeçalhos das colunas
+    arquivo.write("Nome,Sobrenome,RG,CPF,Endereço,Sexo,Data de Nascimento\n")
+
+    # Gere dados aleatórios e escreva 100 linhas no arquivo
+    for _ in range(100):
+        nome = fake.first_name()
+        sobrenome = fake.last_name()
+        rg = fake.random_int(min=10000000, max=99999999)
+        cpf = fake.unique.random_number(digits=11)
+        endereco = fake.address().replace("\n", ", ")
+        sexo = random.choice(["M", "F"])
+        data_nascimento = fake.date_of_birth(minimum_age=18, maximum_age=80).strftime('%d/%m/%Y')
+
+        linha = f"{nome},{sobrenome},{rg},{cpf},{endereco},{sexo},{data_nascimento}\n"
+        arquivo.write(linha)
+
+print("Tabela aleatória gerada com sucesso.")

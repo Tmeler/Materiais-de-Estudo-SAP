@@ -1,0 +1,12 @@
+Principais Transações ABAP
+
+SE38- Escrita dos programas Executável
+SE11- Edição do Banco de Dados (tabelas)
+SE41- Desenho de Interface do Usuário
+SE51- Desenho de tela de diálogo
+SE37- Programação de módulo de Funções
+SE80- Utilizado para criação de programas online. Desenvolvimento Organizado
+SE91- Classe de organização de mensagens
+SE09- Gerenciamento de request, Workbench ou Customizing
+SM37- Gerenciamento de Jobs
+SE24- Gerenciamento de Classes
